@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spin the Wheel — Neon Reward Game</title>
+  <meta name="description" content="Spin a colorful neon wheel and win fun rewards." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1 class="title">SPIN THE WHEEL</h1>
+    <p class="subtitle">Press SPIN and let fate decide your fun</p>
+  </header>
+
+  <main class="stage">
+    <div class="wheel-wrap">
+      <div class="pointer">
+        <svg width="44" height="54" viewBox="0 0 44 54">
+          <polygon points="22,50 4,8 40,8" fill="#7df9ff" stroke="#fff" stroke-width="2"/>
+          <circle cx="22" cy="14" r="4" fill="#fff"/>
+        </svg>
+      </div>
+
+      <div id="wheel" class="wheel"></div>
+
+      <div class="hub">★</div>
+    </div>
+
+    <button id="spinBtn" class="btn-spin">SPIN</button>
+
+    <div id="result" class="result hidden">
+      <p class="result-label">YOU WON</p>
+      <p class="result-text"><span id="resultEmoji"></span> <span id="resultLabel"></span></p>
+    </div>
+
+    <section class="history">
+      <div class="history-head">
+        <h2>SPIN HISTORY</h2>
+        <button id="resetBtn" class="btn-reset hidden">Reset</button>
+      </div>
+      <ul id="historyList" class="history-list">
+        <li class="empty">No spins yet — give it a whirl!</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
